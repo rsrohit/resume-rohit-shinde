@@ -1,3 +1,15 @@
+# Resume Website
+
+This is my personal resume website built with Vue.js and Tailwind CSS.
+
+## Features
+- Responsive design
+- Modern UI
+- Deployed using GitHub Pages
+
+## Live Demo
+[View Live](https://rsrohit.github.io/resume-rohit-shinde/)
+
 # resume-rohit-shinde
 
 ## Project setup
