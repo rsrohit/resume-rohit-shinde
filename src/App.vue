@@ -1,15 +1,16 @@
 <template>
-  <div class="min-h-screen bg-gray-100 flex justify-center py-10 px-5">
-    <div class="max-w-4xl w-full bg-white shadow-lg rounded-lg p-8">
-      <header class="text-left border-b pb-6">
-        <h1 class="text-4xl font-bold text-blue-800">ROHIT SHINDE</h1>
-        <p class="text-lg text-gray-600 mt-2">Senior Test Automation Engineer</p>
+  <div class="min-h-screen bg-gray-100 flex justify-center py-5 px-3 sm:py-10 sm:px-5">
+    <div class="max-w-4xl w-full bg-white shadow-lg rounded-lg p-4 sm:p-8">
+      <header class="text-left border-b pb-4 sm:pb-6">
+        <h1 class="text-2xl sm:text-4xl font-bold text-blue-800">ROHIT SHINDE</h1>
+        <p class="text-base sm:text-lg text-gray-600 mt-1 sm:mt-2">Senior Test Automation Engineer</p>
       </header>
 
       <!-- Grid Layout with Separator -->
-      <div class="grid grid-cols-3 gap-6 mt-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 mt-4 sm:mt-6">
         <!-- Left Column -->
-        <div class="col-span-1 space-y-6 border-r border-gray-300 pr-6">
+        <div class="col-span-1 space-y-4 sm:space-y-6 border-r border-gray-300 pr-4 sm:pr-6">
+          <!-- Contacts Section -->
           <section>
             <h2 class="text-lg font-semibold text-blue-800 flex items-center">
               <i class="fas fa-address-book mr-2"></i> Contacts
@@ -30,6 +31,7 @@
             </div>
           </section>
 
+          <!-- About Me Section -->
           <section>
             <h2 class="text-lg font-semibold text-blue-800 flex items-center">
               <i class="fas fa-user mr-2"></i> About Me
@@ -42,6 +44,7 @@
             </p>
           </section>
 
+          <!-- Skills Section -->
           <section>
             <h2 class="text-lg font-semibold text-blue-800 flex items-center">
               <i class="fas fa-tools mr-2"></i> Skills
@@ -58,6 +61,7 @@
             </div>
           </section>
 
+          <!-- Education Section -->
           <section>
             <h2 class="text-lg font-semibold text-blue-800 flex items-center">
               <i class="fas fa-graduation-cap mr-2"></i> Education
@@ -69,6 +73,7 @@
             </div>
           </section>
 
+          <!-- Links Section -->
           <section>
             <h2 class="text-lg font-semibold text-blue-800 flex items-center">
               <i class="fas fa-link mr-2"></i> Links
@@ -89,19 +94,17 @@
         </div>
 
         <!-- Right Column -->
-        <div class="col-span-2 pl-6">
+        <div class="col-span-1 md:col-span-2 pl-0 md:pl-6 mt-6 md:mt-0">
+          <!-- Work Experience Section -->
           <section>
             <h2 class="text-lg font-semibold text-blue-800 flex items-center">
               <i class="fas fa-briefcase mr-2"></i> Work Experience
             </h2>
-
             <div v-if="isLoading" class="flex justify-center mt-4">
               <span class="text-gray-500 text-sm">Loading experience...</span>
             </div>
-
             <div v-else class="mt-4 space-y-4">
               <div v-for="company in workExperience" :key="company.id" class="relative">
-                <!-- Bullet -->
                 <div class="absolute -left-4 top-2 w-2 h-2 bg-blue-800 rounded-full"></div>
                 <h3 class="text-md font-semibold text-indigo-600">{{ company.name }}</h3>
                 <p class="text-sm text-gray-600 italic">{{ company.position }} ({{ company.period }})</p>
@@ -114,6 +117,7 @@
             </div>
           </section>
 
+          <!-- Certification Section -->
           <section class="mt-8">
             <h2 class="text-lg font-semibold text-blue-800 flex items-center">
               <i class="fas fa-check mr-2"></i> Certification
@@ -121,10 +125,8 @@
             <div v-if="isLoading" class="flex justify-center mt-4">
               <span class="text-gray-500 text-sm">Loading certifications...</span>
             </div>
-
             <div v-else class="mt-4 space-y-4">
               <div v-for="cert in certifications" :key="cert.id" class="relative">
-                <!-- Bullet -->
                 <div class="absolute -left-4 top-2 w-2 h-2 bg-blue-800 rounded-full"></div>
                 <div @click="openCertModal(cert)"
                   class="cursor-pointer p-4 border rounded-lg shadow-md hover:shadow-lg hover:bg-gray-50 transition">
@@ -156,7 +158,7 @@
 
     <!-- Modal for Certifications -->
     <div v-if="showCertModal" class="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50">
-      <div class="bg-white w-[1000px] max-w-full rounded-lg p-6 shadow-lg max-h-[90vh] overflow-y-auto relative">
+      <div class="bg-white w-[800px] max-w-full rounded-lg p-6 shadow-lg max-h-[90vh] overflow-y-auto relative">
         <button @click="closeCertModal" class="absolute top-4 right-4 text-gray-600" aria-label="Close Modal">✖</button>
         <h2 class="text-xl font-bold text-gray-900 text-center">{{ selectedCert.title }}</h2>
         <p class="text-gray-600 text-sm text-center">{{ selectedCert.platform }}</p>
