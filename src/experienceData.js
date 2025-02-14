@@ -2,7 +2,7 @@
 export default [
     {
         id: "globant",
-        name: "Globant India Pvt Ltd, Pune",
+        name: "Globant India Pvt Ltd",
         position: "Senior Test Automation Engineer",
         period: "Dec 2020 - Present",
         projects: [
@@ -38,7 +38,7 @@ export default [
     },
     {
         id: "expleo",
-        name: "Expleo Group, Pune",
+        name: "Expleo Group",
         position: "QA Analyst",
         period: "May 2017 - Feb 2020",
         projects: [
@@ -57,7 +57,7 @@ export default [
     },
     {
         id: "yardi",
-        name: "Yardi Software India Pvt Ltd, Pune",
+        name: "Yardi Software India Pvt Ltd",
         position: "Specialist QC - II",
         period: "Sep 2015 - May 2017",
         projects: [
@@ -76,7 +76,7 @@ export default [
     },
     {
         id: "syntel",
-        name: "Syntel Ltd, Pune",
+        name: "Syntel Ltd",
         position: "Testing Engineer",
         period: "Jul 2012 - Sep 2015",
         projects: [
